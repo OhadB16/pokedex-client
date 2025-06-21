@@ -5,7 +5,7 @@ This is a client-side application for a Pokédex, a digital encyclopedia of Pok�
 ## Features
 
 - **Browse Pokémon:** View a grid of Pokémon with their images and names.
-- **Filter and Sort:** Filter Pokémon by type and sort them by number.
+- **Filter and Sort:** Filter Pokémon by type and sort them by number. (with client side cache)
 - **Dark Mode:** Switch between light and dark themes for comfortable viewing.
 - **Capture Pokémon:** Mark Pokémon as "captured".
 
