@@ -1,54 +1,48 @@
-# React + TypeScript + Vite
+# Pokédex Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a client-side application for a Pokédex, a digital encyclopedia of Pokémon. It allows users to browse, filter, capture and view Pokémon.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Browse Pokémon:** View a grid of Pokémon with their images and names.
+- **Filter and Sort:** Filter Pokémon by type and sort them by number.
+- **Dark Mode:** Switch between light and dark themes for comfortable viewing.
+- **Capture Pokémon:** Mark Pokémon as "captured".
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React:** A JavaScript library for building user interfaces.
+- **TypeScript:** A typed superset of JavaScript that compiles to plain JavaScript.
+- **Material-UI (MUI):** A popular React UI framework for faster and easier web development.
+- **Vite:** A fast build tool that provides a quicker and leaner development experience for modern web projects.
+- **TanStack Query:** For fetching, caching, and managing server state.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Prerequisites
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+You need to have [Node.js](https://nodejs.org/) (version 18 or higher) and `npm` installed on your machine.
+
+### Installation & Setup
+
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/OhadB16/pokedex-client.git
+    cd pokedex-client
+    ```
+
+2.  **Install dependencies:**
+    Use `npm` to install the project dependencies.
+    ```sh
+    npm install
+    ```
+
+3.  **Run the development server:**
+    This command will start the Vite development server.
+    ```sh
+    npm run dev
+    ```
+
+    Open your browser and navigate to `http://localhost:5173` / `http://localhost:3000/` (or the URL provided in your terminal) to see the application.
