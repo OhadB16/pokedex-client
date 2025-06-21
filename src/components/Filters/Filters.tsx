@@ -1,6 +1,10 @@
 import { Box, useTheme } from "@mui/material";
 import FilterSelect from "./FilterSelect";
-import { SORT_OPTIONS, TYPE_OPTIONS, LIMIT_OPTIONS } from "../../constants/filters";
+import {
+  SORT_OPTIONS,
+  TYPE_OPTIONS,
+  LIMIT_OPTIONS,
+} from "../../constants/filters";
 
 interface FiltersProps {
   sort: "asc" | "desc";

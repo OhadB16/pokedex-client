@@ -13,7 +13,6 @@ interface PokemonGridProps {
   onCapture: (name: string) => void;
   isLoadingCapture: boolean;
   capturingName: string | null;
-  optimisticCaptured?: string | null;
 }
 
 const PokemonGrid = ({
@@ -21,7 +20,6 @@ const PokemonGrid = ({
   onCapture,
   isLoadingCapture,
   capturingName,
-  optimisticCaptured,
 }: PokemonGridProps) => {
   const { usePokemonsQuery } = usePokemonApi();
   const { page, limit, sort, typeFilter } = filters;
@@ -68,10 +66,6 @@ const PokemonGrid = ({
                 isCapturing={
                   isLoadingCapture &&
                   capturingName?.toLowerCase() === pokemon.name.toLowerCase()
-                }
-                optimisticCaptured={
-                  optimisticCaptured?.toLowerCase() ===
-                  pokemon.name.toLowerCase()
                 }
               />
             </Box>

@@ -8,5 +8,5 @@ export interface Pokemon {
   def?: number;
   spd?: number;
   captured?: boolean;
-  id: string
+  id: string;
 }

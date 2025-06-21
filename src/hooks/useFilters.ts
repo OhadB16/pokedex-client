@@ -1,5 +1,13 @@
 import { useSearchParams } from "react-router-dom";
-import { DEFAULT_LIMIT, DEFAULT_PAGE, EMPTY_STR, LIMIT_STR, PAGE_STR, SORT_STR, TYPE_STR } from "../constants/filters";
+import {
+  DEFAULT_LIMIT,
+  DEFAULT_PAGE,
+  EMPTY_STR,
+  LIMIT_STR,
+  PAGE_STR,
+  SORT_STR,
+  TYPE_STR,
+} from "../constants/filters";
 
 export const useFilters = () => {
   const [searchParams, setSearchParams] = useSearchParams();

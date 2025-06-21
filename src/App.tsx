@@ -24,7 +24,6 @@ function App() {
           onCapture={capture}
           isLoadingCapture={isLoading}
           capturingName={capturingName}
-          optimisticCaptured={null}
         />
       </Container>
     </ThemeProvider>

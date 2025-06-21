@@ -11,7 +11,7 @@ export const PAGE_STR = "page";
 export const TYPE_STR = "type";
 export const SORT_STR = "sort";
 export const ASC_STR = "asc";
-export const EMPTY_STR = ""
+export const EMPTY_STR = "";
 
 export const SORT_OPTIONS: Option<"asc" | "desc">[] = [
   { label: "Ascending", value: "asc" },
