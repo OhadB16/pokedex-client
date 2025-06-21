@@ -21,7 +21,7 @@ interface PokemonProps {
 const PokemonCard = ({
   pokemon,
   onCapture,
-  isCapturing = false,
+  isCapturing = false
 }: PokemonProps) => {
   const theme = useTheme();
   const isDark = theme.palette.mode === "dark";
@@ -31,6 +31,7 @@ const PokemonCard = ({
     : isCapturing
     ? LABEL_CAPTURING
     : LABEL_CAPTURE;
+console.log('isCapturing:',isCapturing);
 
   return (
     <Card

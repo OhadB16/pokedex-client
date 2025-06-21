@@ -10,6 +10,8 @@ export const usePokemonCapture = () => {
   const [capturingName, setCapturingName] = useState<string | null>(null);
 
   const handleCapture = async (name: string) => {
+    if (capturingName !== null) return;
+    
     setCapturingName(name);
 
     try {
