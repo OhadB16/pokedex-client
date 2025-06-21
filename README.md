@@ -35,10 +35,15 @@ You need to have [Node.js](https://nodejs.org/) (version 18 or higher) and `npm`
 
 
 2.  **Install dependencies:**
-    make sure you use node 20:
+    Make sure you're using **Node.js v20**:
+    
+    ```sh
+    # Install Node.js v20 using nvm (Node Version Manager)
     nvm install 20
     nvm use 20
-    node -v  # should be v20.x.x
+    
+    # Confirm the version
+    node -v   # should output something like: v20.x.x
 
     Use `npm i` to install the project dependencies.
     ```sh
