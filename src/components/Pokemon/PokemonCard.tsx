@@ -10,7 +10,12 @@ import {
   CircularProgress,
 } from "@mui/material";
 import type { Pokemon } from "../../types/types";
-import { LABEL_CAPTURE, LABEL_CAPTURED, LABEL_CAPTURING, POKEMON_STATS } from "../../constants/pokemon";
+import {
+  LABEL_CAPTURE,
+  LABEL_CAPTURED,
+  LABEL_CAPTURING,
+  POKEMON_STATS,
+} from "../../constants/pokemon";
 
 interface PokemonProps {
   pokemon: Pokemon;
@@ -21,7 +26,7 @@ interface PokemonProps {
 const PokemonCard = ({
   pokemon,
   onCapture,
-  isCapturing = false
+  isCapturing = false,
 }: PokemonProps) => {
   const theme = useTheme();
   const isDark = theme.palette.mode === "dark";
@@ -31,7 +36,6 @@ const PokemonCard = ({
     : isCapturing
     ? LABEL_CAPTURING
     : LABEL_CAPTURE;
-console.log('isCapturing:',isCapturing);
 
   return (
     <Card
