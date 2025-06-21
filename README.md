@@ -33,13 +33,19 @@ You need to have [Node.js](https://nodejs.org/) (version 18 or higher) and `npm`
     cd pokedex-client
     ```
 
+
 2.  **Install dependencies:**
+    make sure you use node 20:
+    nvm install 20
+    nvm use 20
+    node -v  # should be v20.x.x
+
     Use `npm i` to install the project dependencies.
     ```sh
     npm install
     ```
 
-3.  **Run the development server:**
+4.  **Run the development server:**
     This command will start the Vite development server.
     ```sh
     npm run dev
