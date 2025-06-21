@@ -34,7 +34,7 @@ You need to have [Node.js](https://nodejs.org/) (version 18 or higher) and `npm`
     ```
 
 2.  **Install dependencies:**
-    Use `npm` to install the project dependencies.
+    Use `npm i` to install the project dependencies.
     ```sh
     npm install
     ```
