@@ -1,4 +1,5 @@
 import { Box, Typography, Switch } from "@mui/material";
+import { LOGO_URL, PAGE_TITLE } from "../constants/pokemon";
 
 interface HeaderProps {
   darkMode: boolean;
@@ -6,9 +7,6 @@ interface HeaderProps {
 }
 
 const Header = ({ darkMode, toggleDarkMode }: HeaderProps) => {
-  const PAGE_TITLE = "Pokédex";
-  const LOGO_URL = "https://img.pokemondb.net/sprites/home/normal/pikachu.png";
-
   return (
     <Box
       display="flex"

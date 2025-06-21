@@ -10,12 +10,8 @@ import {
   CircularProgress,
 } from "@mui/material";
 import type { Pokemon } from "../../types/types";
-import {
-  LABEL_CAPTURE,
-  LABEL_CAPTURED,
-  LABEL_CAPTURING,
-  POKEMON_STATS,
-} from "../../constants/pokemon";
+import { POKEMON_STATS } from "../../constants/pokemon";
+import { getCaptureButtonLabel } from "../../utils/utils";
 
 interface PokemonProps {
   pokemon: Pokemon;
@@ -31,11 +27,7 @@ const PokemonCard = ({
   const theme = useTheme();
   const isDark = theme.palette.mode === "dark";
   const { name, number, image_url: imageURL, type, captured } = pokemon;
-  const buttonLabel = captured
-    ? LABEL_CAPTURED
-    : isCapturing
-    ? LABEL_CAPTURING
-    : LABEL_CAPTURE;
+  const buttonLabel = getCaptureButtonLabel(captured, isCapturing);
 
   return (
     <Card
@@ -69,7 +61,7 @@ const PokemonCard = ({
         </Typography>
 
         <Box display="flex" justifyContent="center" gap={1} my={1}>
-          {type?.map((t) => (
+          {type?.map((t: string) => (
             <Chip
               key={t}
               label={t}

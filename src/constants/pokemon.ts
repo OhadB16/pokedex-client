@@ -22,3 +22,7 @@ export const TYPE_COLOR_MAP: Record<string, string> = {
 export const LABEL_CAPTURED = "Captured";
 export const LABEL_CAPTURING = "Capturing...";
 export const LABEL_CAPTURE = "Capture";
+
+export const PAGE_TITLE = "Pokédex";
+export const LOGO_URL =
+  "https://img.pokemondb.net/sprites/home/normal/pikachu.png";

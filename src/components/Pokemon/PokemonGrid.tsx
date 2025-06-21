@@ -1,6 +1,7 @@
-import { Box, Pagination, CircularProgress } from "@mui/material";
+import { Box, Pagination, CircularProgress, Typography } from "@mui/material";
 import PokemonCard from "./PokemonCard";
 import { usePokemonApi } from "../../api/usePokemonApi";
+import type { Pokemon } from "../../types/types";
 
 interface PokemonGridProps {
   filters: {
@@ -23,12 +24,27 @@ const PokemonGrid = ({
 }: PokemonGridProps) => {
   const { usePokemonsQuery } = usePokemonApi();
   const { page, limit, sort, typeFilter } = filters;
-  const { data: pokemons = [], isLoading } = usePokemonsQuery(
-    page,
-    limit,
-    sort,
-    typeFilter
-  );
+  const {
+    data: pokemons = [],
+    isLoading,
+    isError,
+    error,
+  } = usePokemonsQuery(page, limit, sort, typeFilter);
+
+  if (isError) {
+    return (
+      <Box
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        minHeight="60vh"
+      >
+        <Typography color="error">
+          Failed to load Pokémons: {(error as Error).message}
+        </Typography>
+      </Box>
+    );
+  }
 
   return (
     <>
@@ -58,7 +74,7 @@ const PokemonGrid = ({
             <CircularProgress color="primary" size={60} />
           </Box>
         ) : (
-          pokemons.map((pokemon) => (
+          pokemons.map((pokemon: Pokemon) => (
             <Box key={pokemon.id}>
               <PokemonCard
                 pokemon={pokemon}
@@ -76,8 +92,8 @@ const PokemonGrid = ({
       {!isLoading && (
         <Box mt={4} display="flex" justifyContent="center">
           <Pagination
-            count={Math.ceil(100 / filters.limit)}
-            page={filters.page}
+            count={Math.ceil(100 / limit)}
+            page={page}
             onChange={(_, value) => filters.setPage(value)}
             color="primary"
           />

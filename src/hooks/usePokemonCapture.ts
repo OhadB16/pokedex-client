@@ -11,7 +11,7 @@ export const usePokemonCapture = () => {
 
   const handleCapture = async (name: string) => {
     if (capturingName !== null) return;
-    
+
     setCapturingName(name);
 
     try {
